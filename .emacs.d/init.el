@@ -1,20 +1,24 @@
 ;; Installing Use Package
 
 (require 'package)
-(setq package-enable-at-startup nil)
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
+;; Bootstrap 'use-package'
+(eval-after-load 'gnutls
+  '(add-to-list 'gnutls-trustfiles "/etc/ssl/cert.pem"))
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
-
 (eval-when-compile
   (require 'use-package))
-(require 'diminish)
 (require 'bind-key)
+(setq use-package-always-ensure t)
 
-(require 'helm-config)
+(use-package helm
+  :bind (("M-x" . helm-M-x)
+         ("M-<f5>" . helm-find-files)
+         ([f10] . helm-buffers-list)
+         ([S-f10] . helm-recentf)))
 
