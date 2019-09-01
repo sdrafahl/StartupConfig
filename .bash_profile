@@ -14,3 +14,21 @@ git clone https://github.com/sdrafahl/StartupConfig.git
 rm -fr .emacs.d
 sudo mv StartupConfig/.emacs.d/ ./
 rm -fr StartupConfig
+
+# Installing Haskell
+sudo apt install ghc
+
+# Installing Java
+sudo apt install openjdk-8-jre-headless
+
+# Installing Metals
+curl -L -o coursier https://git.io/coursier
+chmod +x coursier
+sudo ./coursier bootstrap \
+  --java-opt -Xss4m \
+  --java-opt -Xms100m \
+  --java-opt -Dmetals.client=emacs \
+  org.scalameta:metals_2.12:0.7.0 \
+  -r bintray:scalacenter/releases \
+  -r sonatype:snapshots \
+  -o /usr/local/bin/metals-emacs -f
