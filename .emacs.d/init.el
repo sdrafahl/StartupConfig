@@ -31,7 +31,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (lsp-mode cyberpunk-theme flycheck sbt-mode scala-mode dap-mode lsp-treemacs helm-lsp company-lsp lsp-ui projectile helm use-package))))
+    (golden-ratio lsp-mode cyberpunk-theme flycheck sbt-mode scala-mode dap-mode lsp-treemacs helm-lsp company-lsp lsp-ui projectile helm use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -78,3 +78,6 @@
 
 ;; Add company-lsp backend for metals
 (use-package company-lsp)
+
+(use-package golden-ratio)
+(golden-ratio-mode 1)
