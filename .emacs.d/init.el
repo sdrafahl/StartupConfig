@@ -83,3 +83,5 @@
 (golden-ratio-mode 1)
 
 (use-package magit)
+
+(show-paren-mode 1)
