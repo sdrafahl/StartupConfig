@@ -84,4 +84,8 @@
 
 (use-package magit)
 
+(use-package expand-region
+  :bind (("C-=". er/expand-region))
+)
+
 (show-paren-mode 1)
