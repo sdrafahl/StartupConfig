@@ -45,6 +45,10 @@
   :hook (scala-mode . lsp)
   :commands lsp)
 
+(use-package yaml-mode
+  :ensure t
+  :mode ("\\.ya?ml\\'" . yaml-mode))
+
 ;; optionally
 (use-package lsp-ui :commands lsp-ui-mode)
 (use-package company-lsp :commands company-lsp)
