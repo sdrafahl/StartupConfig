@@ -88,6 +88,8 @@
 
 (use-package magit)
 
+(use-package npm-mode)
+
 (use-package expand-region
   :bind (("C-=". er/expand-region))
 )
