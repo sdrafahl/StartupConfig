@@ -94,6 +94,11 @@
   :bind (("C-=". er/expand-region))
 )
 
+(use-package editorconfig
+  :ensure t
+  :config
+  (editorconfig-mode 1))
+
 (show-paren-mode 1)
 
 (menu-bar-mode -1) 
