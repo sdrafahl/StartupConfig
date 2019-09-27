@@ -99,6 +99,9 @@
   :config
   (editorconfig-mode 1))
 
+(use-package counsel)
+(use-package ivy)
+
 (ivy-mode 1)
 
 (setq ivy-use-virtual-buffers t)
