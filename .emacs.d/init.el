@@ -102,6 +102,9 @@
 (use-package counsel)
 (use-package ivy)
 
+(use-package avy-zap)
+(global-set-key (kbd "C-;") 'avy-goto-char)
+
 (ivy-mode 1)
 
 (setq ivy-use-virtual-buffers t)
