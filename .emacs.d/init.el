@@ -5,6 +5,10 @@
                          ("melpa" . "http://melpa.org/packages/")))
 (package-initialize)
 
+(load-file "./.emacs.d/becon.el")
+
+(beacon-mode 1)
+
 ;; Bootstrap 'use-package'
 (eval-after-load 'gnutls
   '(add-to-list 'gnutls-trustfiles "/etc/ssl/cert.pem"))
