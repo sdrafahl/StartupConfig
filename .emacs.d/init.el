@@ -43,6 +43,7 @@
  ;; If there is more than one, they won't work right.
  )
 (global-set-key (kbd "M-q") 'projectile-find-file)
+(global-set-key (kbd "C-q") 'projectile-grep)
 
 (use-package cyberpunk-theme)
 
