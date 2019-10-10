@@ -35,7 +35,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (magit golden-ratio lsp-mode cyberpunk-theme flycheck sbt-mode scala-mode dap-mode lsp-treemacs helm-lsp company-lsp lsp-ui projectile helm use-package))))
+    (j golden-ratio lsp-mode cyberpunk-theme flycheck sbt-mode scala-mode dap-mode lsp-treemacs helm-lsp company-lsp lsp-ui projectile helm use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -92,7 +92,9 @@
 (use-package golden-ratio)
 (golden-ratio-mode 1)
 
-(use-package magit)
+(use-package magit
+  :bind (("C-x g" . magit-status))
+)
 
 (use-package npm-mode)
 
