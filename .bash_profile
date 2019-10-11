@@ -39,4 +39,6 @@ sudo apt-key adv --keyserver hkps://keyserver.ubuntu.com:443 --recv 2EE0EA64E40A
 sudo apt-get update
 sudo apt-get install sbt
 
-export PATH=$PATH:/usr/local/bin/terraform_0.12.10_linux_amd64/
+sudo unzip terraform_0.12.10_linux_amd64.zip
+sudo /usr/local/bin/terraformmv terraform 
+export PATH=$PATH:/usr/local/bin/terraform
