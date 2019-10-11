@@ -127,3 +127,11 @@
 (tool-bar-mode -1) 
 
 (add-hook 'after-init-hook 'global-company-mode)
+
+(use-package company-terraform)
+(company-terraform-init)
+
+(use-package company-quickhelp)
+(company-quickhelp-mode)
+
+(use-package terraform-doc)
