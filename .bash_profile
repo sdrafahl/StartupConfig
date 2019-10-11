@@ -41,6 +41,3 @@ sudo apt-get install sbt
 sudo unzip terraform_0.12.10_linux_amd64.zip
 sudo /usr/local/bin/terraformmv terraform 
 export PATH=$PATH:/usr/local/bin/terraform
-
-# Cleanup
-rm -fr StartupConfig
