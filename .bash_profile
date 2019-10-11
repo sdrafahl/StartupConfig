@@ -13,7 +13,6 @@ sudo apt install emacs26 -y
 git clone https://github.com/sdrafahl/StartupConfig.git
 rm -fr .emacs.d
 sudo mv StartupConfig/.emacs.d/ ./
-rm -fr StartupConfig
 
 # Installing Haskell
 sudo apt install ghc
@@ -39,6 +38,10 @@ sudo apt-key adv --keyserver hkps://keyserver.ubuntu.com:443 --recv 2EE0EA64E40A
 sudo apt-get update
 sudo apt-get install sbt
 
+# Installing Terraform
 sudo unzip terraform_0.12.10_linux_amd64.zip
 sudo /usr/local/bin/terraformmv terraform 
 export PATH=$PATH:/usr/local/bin/terraform
+
+# Cleanup
+rm -fr StartupConfig
