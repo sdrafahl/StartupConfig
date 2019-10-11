@@ -38,6 +38,6 @@ sudo apt-get update
 sudo apt-get install sbt
 
 # Installing Terraform
-sudo unzip terraform_0.12.10_linux_amd64.zip
-sudo /usr/local/bin/terraformmv terraform 
+sudo unzip StartupConfig/terraform_0.12.10_linux_amd64.zip
+sudo mv terraform /usr/local/bin/terraform
 export PATH=$PATH:/usr/local/bin/terraform
