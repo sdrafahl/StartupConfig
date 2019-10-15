@@ -9,6 +9,9 @@
 
 (beacon-mode 1)
 
+(setq wttrin-default-cities '("Des Moines"))
+(load-file "./.emacs.d/wttrin.el")
+
 ;; Bootstrap 'use-package'
 (eval-after-load 'gnutls
   '(add-to-list 'gnutls-trustfiles "/etc/ssl/cert.pem"))
@@ -46,7 +49,7 @@
 (global-set-key (kbd "C-q") 'projectile-grep)
 
 (use-package cyberpunk-theme)
-
+(use-package xterm-color)
 (use-package lsp-mode
   :hook (scala-mode . lsp)
   :commands lsp)
