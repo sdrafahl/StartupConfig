@@ -138,3 +138,5 @@
 (company-quickhelp-mode)
 
 (use-package terraform-doc)
+
+(global-set-key (kbd "C-`") 'golden-ratio-adjust)
