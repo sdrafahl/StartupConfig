@@ -7,6 +7,13 @@
 
 (load-file "./.emacs.d/ssh.el")
 
+(require 'ssh)
+(add-hook 'ssh-mode-hook
+          (lambda ()
+            (setq ssh-directory-tracking-mode t)
+            (shell-dirtrack-mode t)
+            (setq dirtrackp nil)))
+
 (load-file "./.emacs.d/becon.el")
 
 (beacon-mode 1)
