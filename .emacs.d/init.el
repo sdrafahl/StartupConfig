@@ -5,6 +5,8 @@
                          ("melpa" . "http://melpa.org/packages/")))
 (package-initialize)
 
+(load-file "./.emacs.d/ssh.el")
+
 (load-file "./.emacs.d/becon.el")
 
 (beacon-mode 1)
