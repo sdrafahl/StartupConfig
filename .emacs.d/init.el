@@ -5,20 +5,9 @@
                          ("melpa" . "http://melpa.org/packages/")))
 (package-initialize)
 
-(load-file "./.emacs.d/ssh.el")
-
-(require 'ssh)
-(add-hook 'ssh-mode-hook
-          (lambda ()
-            (setq ssh-directory-tracking-mode t)
-            (shell-dirtrack-mode t)
-            (setq dirtrackp nil)))
-
 (load-file "./.emacs.d/becon.el")
 
 (beacon-mode 1)
-
-(load-file "./.emacs.d/xterm-color.el")
 
 (setq wttrin-default-cities '("Des Moines"))
 (load-file "./.emacs.d/wttrin.el")
@@ -49,7 +38,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (j golden-ratio lsp-mode cyberpunk-theme flycheck sbt-mode scala-mode dap-mode lsp-treemacs helm-lsp company-lsp lsp-ui projectile helm use-package))))
+    (lsp-rust toml-mode flycheck-rust cargo rust-mode treemacs-projectile lsp-java terraform-doc company-quickhelp company-terraform avy-zap counsel editorconfig expand-region npm-mode magit yaml-mode j golden-ratio lsp-mode cyberpunk-theme flycheck sbt-mode scala-mode dap-mode lsp-treemacs helm-lsp company-lsp lsp-ui projectile helm use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -60,6 +49,7 @@
 (global-set-key (kbd "C-q") 'projectile-grep)
 
 (use-package cyberpunk-theme)
+
 (use-package lsp-mode
   :hook (scala-mode . lsp)
   :commands lsp)
@@ -150,3 +140,27 @@
 (use-package terraform-doc)
 
 (global-set-key (kbd "C-`") 'golden-ratio-adjust)
+
+(use-package treemacs-projectile)
+
+(use-package lsp-java)
+(add-hook 'java-mode-hook #'lsp)
+
+(use-package rust-mode)
+
+(add-hook 'rust-mode-hook
+          (lambda () (setq indent-tabs-mode nil)))
+
+(use-package cargo)
+
+(add-hook 'rust-mode-hook 'cargo-minor-mode)
+
+(use-package toml-mode)
+
+(use-package flycheck-rust
+  :config (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
+
+(lsp-register-client
+ (make-lsp-client :new-connection (lsp-stdio-connection "pyls")
+                  :major-modes '(rust-mode)
+                  :server-id 'pyls))
