@@ -46,3 +46,6 @@ sudo apt-get install sbt
 sudo unzip StartupConfig/terraform_0.12.10_linux_amd64.zip
 sudo mv terraform /usr/local/bin/terraform
 export PATH=$PATH:/usr/local/bin/terraform
+
+# Installing Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
