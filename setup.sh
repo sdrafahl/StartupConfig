@@ -12,6 +12,11 @@ sudo apt install emacs26 -y
 # Installing Emacs init script
 rm -fr .emacs.d
 sudo mv StartupConfig/.emacs.d/ ./
+mkdir .emacs.d/elpa
+mkdir .emacs.d/elpa/gnupg
+sudo chmod 700 .emacs.d/elpa
+sudo chmod 700 .emacs.d/elpa/gnupg
+gpg --homedir ~/.emacs.d/elpa/gnupg --keyserver keyserver.ubuntu.com --recv-keys 066DAFCB81E42C40
 
 # Installing Haskell
 sudo apt install ghc
