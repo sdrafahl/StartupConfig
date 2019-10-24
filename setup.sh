@@ -51,3 +51,4 @@ export PATH=$PATH:/usr/local/bin/terraform
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh 
 
 # Installing Cmake
+sudo apt-get install cmake
