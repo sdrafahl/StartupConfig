@@ -48,4 +48,6 @@ sudo mv terraform /usr/local/bin/terraform
 export PATH=$PATH:/usr/local/bin/terraform
 
 # Installing Rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh 
+
+# Installing Cmake
