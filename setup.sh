@@ -52,3 +52,9 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Installing Cmake
 sudo apt-get install cmake
+
+# Installing vivaldi
+wget -qO- http://repo.vivaldi.com/stable/linux_signing_key.pub | sudo apt-key add -
+sudo add-apt-repository "deb [arch=i386,amd64] http://repo.vivaldi.com/stable/deb/ stable main"
+sudo apt-get update
+sudo apt install vivaldi-stable
