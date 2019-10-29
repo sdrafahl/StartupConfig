@@ -165,3 +165,5 @@
  (make-lsp-client :new-connection (lsp-stdio-connection "pyls")
                   :major-modes '(rust-mode)
                   :server-id 'pyls))
+
+(use-package yasnippet)
