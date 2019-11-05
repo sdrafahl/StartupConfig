@@ -12,6 +12,7 @@
 (setq wttrin-default-cities '("Des Moines"))
 (load-file "./.emacs.d/xterm-color.el")
 (load-file "./.emacs.d/wttrin.el")
+(load-file "./.emacs.d/restclient.el")
 
 ;; Bootstrap 'use-package'
 (eval-after-load 'gnutls
