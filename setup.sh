@@ -18,7 +18,7 @@ sudo chmod 700 .emacs.d/elpa
 sudo chmod 700 .emacs.d/elpa/gnupg
 gpg --homedir ~/.emacs.d/elpa/gnupg --keyserver keyserver.ubuntu.com --recv-keys 066DAFCB81E42C40
 git clone https://github.com/pashky/restclient.el.git
-sudo mv restclient.el/restclient-helm.el .emacs.d/
+sudo mv restclient.el/restclient.el .emacs.d/
 
 # Installing Haskell
 sudo apt install ghc
