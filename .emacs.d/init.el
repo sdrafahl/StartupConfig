@@ -181,3 +181,9 @@
 (add-hook 'god-mode-enabled-hook 'my-update-cursor)
 (add-hook 'god-mode-disabled-hook 'my-update-cursor)
 
+(use-package multiple-cursors
+  :bind (
+	 ("C-S-c C-S-c" . 'mc/edit-lines)
+	 ("C->" . 'mc/mark-next-like-this)
+	)
+)
