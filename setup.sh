@@ -67,3 +67,7 @@ wget -qO- http://repo.vivaldi.com/stable/linux_signing_key.pub | sudo apt-key ad
 sudo add-apt-repository "deb [arch=i386,amd64] http://repo.vivaldi.com/stable/deb/ stable main"
 sudo apt-get update
 sudo apt install vivaldi-stable
+
+# Adding Drone CLI
+curl -L https://github.com/drone/drone-cli/releases/latest/download/drone_linux_amd64.tar.gz | tar zx
+sudo install -t /usr/local/bin drone
