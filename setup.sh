@@ -71,3 +71,6 @@ sudo apt install vivaldi-stable
 # Adding Drone CLI
 curl -L https://github.com/drone/drone-cli/releases/latest/download/drone_linux_amd64.tar.gz | tar zx
 sudo install -t /usr/local/bin drone
+
+# Installing OpenDyslexia Font
+sudo apt-get install fonts-opendyslexia
