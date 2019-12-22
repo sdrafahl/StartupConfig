@@ -235,3 +235,4 @@
          auto-package-update-interval 4)
    (auto-package-update-maybe))
 
+(add-to-list 'default-frame-alist '(font . "OpenDyslexicMono"))
