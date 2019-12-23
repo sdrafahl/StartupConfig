@@ -236,3 +236,5 @@
    (auto-package-update-maybe))
 
 (add-to-list 'default-frame-alist '(font . "OpenDyslexicMono"))
+
+(hs-minor-mode 1)
