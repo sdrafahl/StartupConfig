@@ -77,6 +77,7 @@ sudo apt-get install fonts-opendyslexia
 
 # Installing minikube
 sudo apt install libvirt-clients
+sudo apt install virt-manager
 virt-host-validate
 mkdir minikube
 cd minkikube
