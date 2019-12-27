@@ -84,3 +84,8 @@ cd minkikube
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_1.6.2.deb \
  && sudo dpkg -i minikube_1.6.2.deb
 cd ..
+
+# Installing kubectl
+curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+chmod +x kubectl
+sudo mv kubectl /usr/local/bin/
