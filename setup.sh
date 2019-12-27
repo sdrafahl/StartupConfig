@@ -74,3 +74,10 @@ sudo install -t /usr/local/bin drone
 
 # Installing OpenDyslexia Font
 sudo apt-get install fonts-opendyslexia
+
+# Installing minikube
+mkdir minikube
+cd minkikube
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_1.6.2.deb \
+ && sudo dpkg -i minikube_1.6.2.deb
+cd ..
