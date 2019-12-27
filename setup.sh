@@ -76,6 +76,8 @@ sudo install -t /usr/local/bin drone
 sudo apt-get install fonts-opendyslexia
 
 # Installing minikube
+sudo apt install libvirt-clients
+virt-host-validate
 mkdir minikube
 cd minkikube
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_1.6.2.deb \
