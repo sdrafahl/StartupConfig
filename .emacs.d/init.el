@@ -237,4 +237,5 @@
 
 (add-to-list 'default-frame-alist '(font . "OpenDyslexicMono"))
 
-(hs-minor-mode 1)
+(use-package dockerfile-mode)
+(add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
