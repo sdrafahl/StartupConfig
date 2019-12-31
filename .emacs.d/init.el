@@ -13,6 +13,7 @@
 (load-file "./.emacs.d/xterm-color.el")
 (load-file "./.emacs.d/wttrin.el")
 (load-file "./.emacs.d/restclient.el")
+(load-file "./.emacs.d/restclient-helm.el")
 
 ;; Bootstrap 'use-package'
 (eval-after-load 'gnutls
