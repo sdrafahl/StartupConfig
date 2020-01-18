@@ -8,6 +8,9 @@ echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sourc
 sudo apt-get update
 sudo apt-get install spotify-client
 
+# Installing AWSCLI
+sudo apt install awscli
+
 # Installing Emacs
 sudo add-apt-repository ppa:kelleyk/emacs -y
 sudo apt-get update -y
