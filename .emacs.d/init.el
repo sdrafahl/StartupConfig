@@ -61,6 +61,13 @@
   :ensure t
   :mode ("\\.ya?ml\\'" . yaml-mode))
 
+(use-package fold-this
+  :bind (
+	 ("C-c C-f" . fold-this-all)
+	 ("C-c C-F" . fold-this)
+	 ("C-c M-f" . fold-this-unfold-all)
+	)
+)
 ;; optionally
 (use-package lsp-ui :commands lsp-ui-mode)
 (use-package company-lsp :commands company-lsp)
