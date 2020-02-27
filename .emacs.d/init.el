@@ -244,7 +244,7 @@
          auto-package-update-interval 4)
    (auto-package-update-maybe))
 
-(add-to-list 'default-frame-alist '(font . "OpenDyslexicMono"))
+(add-to-list 'default-frame-alist '(font . "OpenDyslexicMono-10"))
 
 (use-package dockerfile-mode)
 (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
