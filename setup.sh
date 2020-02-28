@@ -31,6 +31,7 @@ sudo mv restclient.el/restclient-helm.el .emacs.d/
 
 # Installing Haskell
 sudo apt install ghc
+curl -sSL https://get.haskellstack.org/ | sh
 
 # Installing Java
 sudo apt install openjdk-8-jre-headless
