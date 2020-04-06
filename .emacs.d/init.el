@@ -272,3 +272,6 @@
 (add-hook 'dante-mode-hook
    '(lambda () (flycheck-add-next-checker 'haskell-dante
                 '(warning . haskell-hlint))))
+
+(add-to-list 'exec-path "/usr/local/bin")
+(use-package ejc-sql)
