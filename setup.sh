@@ -107,3 +107,8 @@ sudo apt-get update && sudo apt-get install google-cloud-sdk
 # Installing DB stuff
 sudo apt install postgresql-client-common
 sudo apt install leiningen
+
+# Clementine music player
+sudo add-apt-repository ppa:me-davidsansome/clementine
+sudo apt-get update
+sudo apt-get install clementine
