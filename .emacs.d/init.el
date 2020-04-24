@@ -275,3 +275,5 @@
 
 (add-to-list 'exec-path "/usr/local/bin")
 (use-package ejc-sql)
+
+(use-package presentation)
