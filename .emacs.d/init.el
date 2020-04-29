@@ -277,3 +277,8 @@
 (use-package ejc-sql)
 
 (use-package presentation)
+
+(use-package helm-company
+	 :bind (
+	 ("C-:" . 'helm-company)	 
+)
