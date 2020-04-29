@@ -115,3 +115,6 @@ sudo apt-get install clementine
 
 # Installing syncthing
 sudo apt install syncthing
+
+# Installing jekyll
+sudo apt-get install jekyll
