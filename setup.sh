@@ -118,3 +118,6 @@ sudo apt install syncthing
 
 # Installing jekyll
 sudo apt-get install jekyll
+
+# Configure Git
+git config --global credential.helper 'cache --timeout=9999999'
