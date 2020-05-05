@@ -102,8 +102,13 @@
 ;; Add company-lsp backend for metals
 (use-package company-lsp)
 
-(use-package golden-ratio)
-(golden-ratio-mode 1)
+(use-package zoom)
+
+(custom-set-variables
+ '(zoom-mode t))
+
+(custom-set-variables
+ '(zoom-size '(0.618 . 0.618)))
 
 (use-package magit
   :bind (("C-x g" . magit-status))
@@ -148,8 +153,6 @@
 (company-quickhelp-mode)
 
 (use-package terraform-doc)
-
-(global-set-key (kbd "C-`") 'golden-ratio-adjust)
 
 (use-package treemacs-projectile)
 
