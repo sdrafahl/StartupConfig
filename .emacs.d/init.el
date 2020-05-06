@@ -284,4 +284,7 @@
 (use-package helm-company
 	 :bind (
 	 ("C-:" . 'helm-company)	 
-)
+))
+
+	 
+(global-set-key (kbd "C-x C-b" ) 'sbt-command)
