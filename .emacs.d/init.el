@@ -288,3 +288,5 @@
 
 	 
 (global-set-key (kbd "C-x C-b" ) 'sbt-command)
+
+(use-package inf-mongo)
