@@ -32,6 +32,7 @@
          ([f10] . helm-buffers-list)
          ([S-f10] . helm-recentf)))
 
+(use-package dracula-theme)
 (unless (package-installed-p 'projectile)
   (package-install 'projectile))
 (custom-set-variables
@@ -41,7 +42,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (lsp-rust toml-mode flycheck-rust cargo rust-mode treemacs-projectile lsp-java terraform-doc company-quickhelp company-terraform avy-zap counsel editorconfig expand-region npm-mode magit yaml-mode j golden-ratio lsp-mode cyberpunk-theme flycheck sbt-mode scala-mode dap-mode lsp-treemacs helm-lsp company-lsp lsp-ui projectile helm use-package))))
+    (lsp-rust toml-mode flycheck-rust cargo rust-mode treemacs-projectile lsp-java terraform-doc company-quickhelp company-terraform avy-zap counsel editorconfig expand-region npm-mode magit yaml-mode j golden-ratio lsp-mode dracula-theme flycheck sbt-mode scala-mode dap-mode lsp-treemacs helm-lsp company-lsp lsp-ui projectile helm use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
