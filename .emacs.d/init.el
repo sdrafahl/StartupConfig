@@ -296,4 +296,4 @@
   :ensure t
   :bind ("C-c d" . docker))
 
-(load-theme 'dracula-theme t)
+(load-theme 'dracula t)
