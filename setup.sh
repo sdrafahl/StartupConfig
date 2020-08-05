@@ -17,7 +17,7 @@ sudo apt install awscli
 # Installing Emacs
 sudo add-apt-repository ppa:kelleyk/emacs -y
 sudo apt-get update -y
-sudo apt install emacs26 -y
+sudo apt install emacs27 -y
 
 # Installing Emacs init script
 rm -fr .emacs.d
