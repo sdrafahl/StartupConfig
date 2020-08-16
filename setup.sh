@@ -15,9 +15,17 @@ sudo apt-get install spotify-client
 sudo apt install awscli
 
 # Installing Emacs
-sudo add-apt-repository ppa:kelleyk/emacs -y
-sudo apt-get update -y
-sudo apt install emacs26 -y
+mkdir emacs
+cd emacs
+git init
+git remote add origin https://github.com/emacs-mirror/emacs.git
+git fetch --depth 1 origin emacs-27
+git reset --hard FETCH_HEAD
+sudo apt install autoconf make gcc texinfo libgtk-3-dev libxpm-dev libjpeg-dev libgif-dev libtiff5-dev libgnutls28-dev libncurses5-dev
+./autogen.sh
+./configure --with-modules
+make
+sudo make install
 
 # Installing Emacs init script
 rm -fr .emacs.d
