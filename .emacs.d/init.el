@@ -282,6 +282,8 @@
 
 (use-package presentation)
 
+(use-package lsp-metals)
+
 (use-package helm-company
 	 :bind (
 	 ("C-:" . 'helm-company)	 
