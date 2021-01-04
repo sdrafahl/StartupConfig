@@ -1,20 +1,25 @@
 # updating
+echo "Updating........................."
 sudo apt-get update
 sudo apt-get upgrade
 
 # Install Curl
+echo "Install Curl........................."
 sudo apt install curl
 
 # Installing Spotify
+echo "Install Spotify........................."
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
 echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt-get update
 sudo apt-get install spotify-client
 
 # Installing AWSCLI
+echo "Install AWSCLI........................."
 sudo apt install awscli
 
 # Installing Emacs
+echo "Install Emacs........................."
 mkdir emacs
 cd emacs
 git init
@@ -28,6 +33,7 @@ make
 sudo make install
 
 # Installing Emacs init script
+echo "Install Init Script........................."
 rm -fr .emacs.d
 sudo mv StartupConfig/.emacs.d/ ./
 mkdir .emacs.d/elpa
@@ -41,6 +47,7 @@ sudo mv restclient.el/restclient.el .emacs.d/
 sudo mv restclient.el/restclient-helm.el .emacs.d/
 
 # Installing Haskell
+echo "Install Haskell........................."
 sudo apt install ghc
 curl -sSL https://get.haskellstack.org/ | sh
 
