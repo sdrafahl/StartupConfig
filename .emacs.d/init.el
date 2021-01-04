@@ -115,8 +115,6 @@
   :bind (("C-x g" . magit-status))
 )
 
-(use-package lsp-metals)
-
 (use-package npm-mode)
 
 (use-package expand-region
