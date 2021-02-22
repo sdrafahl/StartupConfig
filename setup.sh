@@ -55,9 +55,9 @@ curl -sSL https://get.haskellstack.org/ | sh
 sudo apt install openjdk-8-jre-headless
 
 # Installing Metals
-curl -L -o coursier https://git.io/coursier
+curl -L -o coursier https://git.io/coursier-cli
 chmod +x coursier
-sudo ./coursier bootstrap \
+./coursier bootstrap \
   --java-opt -Xss4m \
   --java-opt -Xms100m \
   --java-opt -Dmetals.client=emacs \
