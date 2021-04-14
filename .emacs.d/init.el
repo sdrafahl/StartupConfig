@@ -32,7 +32,6 @@
          ([f10] . helm-buffers-list)
          ([S-f10] . helm-recentf)))
 
-(use-package dracula-theme)
 (unless (package-installed-p 'projectile)
   (package-install 'projectile))
 (custom-set-variables
@@ -297,8 +296,6 @@
 (use-package docker
   :ensure t
   :bind ("C-c d" . docker))
-
-(load-theme 'dracula t)
 
 (setq dap-auto-configure-features '(sessions locals controls tooltip))
 
