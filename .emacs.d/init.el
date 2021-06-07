@@ -178,8 +178,6 @@
                   :major-modes '(rust-mode)
                   :server-id 'pyls))
 
-(use-package yasnippet)
-
 (use-package god-mode
   :bind (("C-." . 'god-mode-all))
 )
