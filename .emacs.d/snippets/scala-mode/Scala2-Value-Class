@@ -1,0 +1,32 @@
+s# -*- mode: snippet -*-
+# name: Scala2-Value-Class
+# key: Scala2ValueClass
+# --
+package $1
+
+import cats.Show
+import cats.derived.auto.show._
+import cats.derived.semiauto
+import cats.kernel.Hash
+import cats.kernel.Order
+import io.circe.Codec
+import io.circe.generic.semiauto.deriveCodec
+
+final case class $2(value: $3) extends AnyVal
+
+object CardName {
+  implicit lazy final val cardNameCodec: Codec[$2] = deriveCodec
+
+  def toString(a: $2): String = show.show(a)
+
+  implicit lazy val show: Show[$2] = semiauto.show
+
+  implicit lazy val ordering: Ordering[$2] = hashOrder.toOrdering
+
+  implicit lazy val hashOrder: Hash[$2] with Order[$2] = new Hash[$2] with Order[$2] {
+
+    override def compare(x: $2, y: $2): Int = semiauto.order[$2].compare(x, y)
+
+    def hash(c: $2) = c.hashCode()
+  }
+}
