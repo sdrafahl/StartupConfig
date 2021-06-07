@@ -328,8 +328,6 @@
 
 (use-package lsp-ui)
 
-(use-package yasnippet)
-
 ;; Activate this minor mode when dap is initialized
 (add-hook 'dap-session-created-hook '+dap-running-session-mode)
 
