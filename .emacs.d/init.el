@@ -341,3 +341,4 @@
 
 (setq lsp-lens-enable t)
 
+(yas-global-mode 1)
