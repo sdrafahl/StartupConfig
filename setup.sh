@@ -57,11 +57,11 @@ sudo apt install openjdk-8-jre-headless
 # Installing Metals
 curl -L -o coursier https://git.io/coursier-cli
 chmod +x coursier
-sudo ./coursier bootstrap \
+./coursier bootstrap \
   --java-opt -Xss4m \
   --java-opt -Xms100m \
   --java-opt -Dmetals.client=emacs \
-  org.scalameta:metals_2.12:0.10.2 \
+  org.scalameta:metals_2.12:0.10.4 \
   -r bintray:scalacenter/releases \
   -r sonatype:snapshots \
   -o /usr/local/bin/metals-emacs -f
