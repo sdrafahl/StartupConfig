@@ -12,12 +12,12 @@ import cats.kernel.Order
 import io.circe.Codec
 import io.circe.generic.semiauto.deriveCodec
 
-final case class $2(value: $3) extends AnyVal
+final case class $2(value: $3) extends AnyVal {
+   override def toString = this.show
+}
 
 object $2 {
   implicit lazy final val cardNameCodec: Codec[$2] = deriveCodec
-
-  def toString(a: $2): String = show.show(a)
 
   implicit lazy val show: Show[$2] = semiauto.show
 
