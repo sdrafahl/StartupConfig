@@ -57,6 +57,13 @@
   :hook (scala-mode . lsp)
   :commands lsp)
 
+(require 'lsp)
+(require 'lsp-haskell)
+;; Hooks so haskell and literate haskell major modes trigger LSP setup
+(add-hook 'haskell-mode-hook #'lsp)
+(add-hook 'haskell-literate-mode-hook #'lsp)
+
+
 (use-package yaml-mode
   :ensure t
   :mode ("\\.ya?ml\\'" . yaml-mode))
@@ -250,29 +257,12 @@
 (use-package dockerfile-mode)
 (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode))
 
-;; Haskell Dante
-
-(use-package dante
-  :ensure t
-  :after haskell-mode
-  :commands 'dante-mode
-  :init
-  (add-hook 'haskell-mode-hook 'flycheck-mode)
-  ;; OR:
-  ;; (add-hook 'haskell-mode-hook 'flymake-mode)
-  (add-hook 'haskell-mode-hook 'dante-mode)
-  )
-
 (setq flymake-no-changes-timeout nil)
 (setq flymake-start-syntax-check-on-newline nil)
 (setq flycheck-check-syntax-automatically '(save mode-enabled))
 
 (auto-save-visited-mode 1)
 (setq auto-save-visited-interval 1)
-
-(add-hook 'dante-mode-hook
-   '(lambda () (flycheck-add-next-checker 'haskell-dante
-                '(warning . haskell-hlint))))
 
 (add-to-list 'exec-path "/usr/local/bin")
 (use-package ejc-sql)
